@@ -119,8 +119,8 @@ class BuscaLargura:
       return
     
     try: 
-      # utilizacao do pop para fila FIFO
-      no = self.fronteira.pop(0)
+    #utilizacao do push para fila LIFO
+      no = self.fronteira.push(0)
     except IndexError:
       self.situacao = busca_falha 
       return
@@ -143,4 +143,4 @@ no_arad = No('Arad', 0, None, None)
 problema_romenia = Problema(estados_romenia, 
                             no_arad,
                             lambda no: no.estado == 'Eforic')
-      
+ 
