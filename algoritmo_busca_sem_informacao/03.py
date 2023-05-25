@@ -107,8 +107,6 @@ class BuscaLargura:
             print("Busca teve sucesso!")
             print(f"Solucao: {self.solucao}")
             
-        return 
-            
   def passo_busca(self):
     if (self.situacao == busca_falha):
       print("Busca falhou!")
@@ -133,11 +131,9 @@ class BuscaLargura:
       
     # obtem os filhos do no 
     for filho in no.filhos(self.problema):
-      if not (filho in self.fronteira) and not (filho.estado in self.visitados):
+      if (filho not in self.fronteira) and (filho.estado not in self.visitados):
         self.fronteira.append(filho)
         self.visitados.append(filho.estado)
-    
-    return
   
 class BuscaProfundidade:
   def __init__(self, problema):
@@ -157,8 +153,6 @@ class BuscaProfundidade:
         elif self.situacao == busca_sucesso:
             print("Busca teve sucesso!")
             print(f"Solucao: {self.solucao}")
-            
-        return 
             
   def passo_busca(self):
     if (self.situacao == busca_falha):
@@ -184,12 +178,10 @@ class BuscaProfundidade:
       
     # obtem os filhos do no 
     for filho in no.filhos(self.problema):
-      if not (filho in self.fronteira) and not (filho.estado in self.visitados):
+      if (filho not in self.fronteira) and (filho.estado not in self.visitados):
         self.fronteira.append(filho)
         self.visitados.append(filho.estado)
-    
-    return
-  
+
 no_arad = No('Arad', 0, None, None)
 problema_romenia = Problema(estados_romenia, 
                             no_arad,
