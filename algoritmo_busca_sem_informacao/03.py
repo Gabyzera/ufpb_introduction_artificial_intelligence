@@ -88,6 +88,57 @@ busca_falha = 1
 busca_sucesso = 2
 busca_em_curso = 3
 
+class BuscaLargura:
+  def __init__(self, problema):
+    self.problema = problema
+    self.fronteira = [problema.inicial]
+    self.visitados = [problema.inicial.estado]
+    self.solucao = []
+    self.situacao = busca_iniciando
+    
+  def executar(self):
+        while self.situacao != busca_falha and self.situacao != busca_sucesso:
+            self.passo_busca()
+
+        if self.situacao == busca_falha:
+            print("Busca falhou!")
+            
+        elif self.situacao == busca_sucesso:
+            print("Busca teve sucesso!")
+            print(f"Solucao: {self.solucao}")
+            
+        return 
+            
+  def passo_busca(self):
+    if (self.situacao == busca_falha):
+      print("Busca falhou!")
+      return
+    
+    if (self.situacao == busca_sucesso):
+      print("Busca chegou ao objetivo com sucesso!")
+      return
+    
+    try: 
+      # utilizacao do pop para fila FIFO
+      no = self.fronteira.pop(0)
+    except IndexError:
+      self.situacao = busca_falha 
+      return
+    
+    # faz teste do objetivo 
+    if self.problema.objetivo(no):
+      self.situacao = busca_sucesso
+      self.solucao = no.constroi_solucao()
+      return 
+      
+    # obtem os filhos do no 
+    for filho in no.filhos(self.problema):
+      if not (filho in self.fronteira) and not (filho.estado in self.visitados):
+        self.fronteira.append(filho)
+        self.visitados.append(filho.estado)
+    
+    return
+  
 class BuscaProfundidade:
   def __init__(self, problema):
     self.problema = problema
@@ -142,5 +193,12 @@ class BuscaProfundidade:
 no_arad = No('Arad', 0, None, None)
 problema_romenia = Problema(estados_romenia, 
                             no_arad,
-                            lambda no: no.estado == 'Eforic')
- 
+                            lambda no: no.estado == 'Bucharest')
+
+while BuscaLargura != busca_falha and BuscaLargura != busca_sucesso:
+  BuscaLargura.self.passo_busca()
+  print(BuscaLargura.fronteira)
+
+while BuscaProfundidade != busca_falha and BuscaProfundidade != busca_sucesso:
+  BuscaProfundidade.self.passo_busca()
+  print(BuscaProfundidade.fronteira)
