@@ -11,7 +11,7 @@ Dividido por arquivos com as especificações das respectivas questões.
   - explora um ramo ou caminho até que não haja mais nós a serem explorados.
 
 ## ❔ Qual caminho seguir?
-No exercício, o objetivo era encontrar um caminho que partisse de uma cidade para outra na Romênia. A junção dos dois tipos de busca deixa claro o método mais prático que cada uma se adequa, como o exemplo do caminho a ser percorrido da cidade de  "Arad" para "Bucharest". Podemos representar as cidades como nós e as estradas entre elas como arestas de um grafo. explora um ramo ou caminho até que não haja mais nós a serem explorados, chegando no destino final. 
+No exercício, algumas questões possuiam o objetivo era encontrar um caminho que partisse de uma cidade para outra na Romênia. A junção dos dois tipos de busca deixa claro o método mais prático que cada uma se adequa, como o exemplo do caminho a ser percorrido da cidade de  "Arad" para "Bucharest". Podemos representar as cidades como nós e as estradas entre elas como arestas de um grafo. explora um ramo ou caminho até que não haja mais nós a serem explorados, chegando no destino final. 
 
 
 ## 🖥️ Contribuidores:
