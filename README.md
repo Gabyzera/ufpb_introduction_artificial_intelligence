@@ -15,4 +15,4 @@ No exercício, o objetivo era encontrar um caminho que partisse de uma cidade pa
 
 
 ## 🖥️ Contribuidores:
-<a href="https://github.com/beatrizzzzz">Beatriz Vitorio</a> <br> <a href="https://github.com/Gabyzera">Gabrielly Silva</a> href="https://github.com/NigGusta">Gustavo Araújo</a> <br> <a 
+<a href="https://github.com/beatrizzzzz">Beatriz Vitorio</a> <br> <a href="https://github.com/Gabyzera">Gabrielly Silva</a> <br> href="https://github.com/NigGusta">Gustavo Araújo</a> <br> <a 
